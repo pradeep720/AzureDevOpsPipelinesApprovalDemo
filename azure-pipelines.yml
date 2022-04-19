@@ -6,7 +6,7 @@ pool:
 
 variables:
   BuildConfiguration: 'Release'
-  ServiceConnection: 'Jason Specland MS Internal (78665f33-bc7d-43df-9f83-ac1064dd74eb)'
+  ServiceConnection: 'devops-team-serviceconnection'
 
 stages:
 - stage: 'Build'
@@ -53,7 +53,7 @@ stages:
             inputs:
               azureSubscription: '$(ServiceConnection)'
               appType: 'webApp'
-              WebAppName: 'pipelinesapprovaldemo-dev'
+              WebAppName: 'VigneshDotNetApp'
               package: '$(Pipeline.Workspace)/**/*.zip'
               AppSettings: '-ASPNETCORE_ENVIRONMENT $(EnvironmentName) -MyVariable $(MyVariable)'
 

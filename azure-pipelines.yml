@@ -40,7 +40,7 @@ stages:
 - stage: 'Deploy'
   jobs:
   - deployment: 'Deploy'
-    environment: 'Dev'
+    environment: 'staging'
     variables:
       EnvironmentName: 'Development'
       MyVariable: 'DEV_VALUE'
